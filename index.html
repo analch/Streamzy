@@ -1,13 +1,156 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StreamZy</title>
+  <link rel="icon" type="icon logo" href="mini logo.jpg">
+  <link rel="stylesheet" href="/src/scss/main.scss">
+</head>
+
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="top-bar__left">
+        <img src="logo.png" alt="logo" class="logo" />
+        <nav class="navbar">
+          <a href="/" aria-current="page">ACCUEIL</a>
+          <a href="/series">SERIES</a>
+          <a href="/films">FILMS</a>
+          <a href="/ma liste">MA LISTE</a>
+        </nav>
+      </div>
+      <div class="user-icon" role="button" aria-label="Profil"></div>
+    </div>
+  </header>
+
+  <main>
+    <a class="cards cards--hero" href="/futurama" aria-label="Futurama">
+      <a href="aboutfuturama.html">
+        <img src="futu.webp" alt="Futurama" />
+      </a>
+
+
+      <h1>Dernières découvertes</h1>
+      <div class="cards cards--list" role="list">
+        <div class="cards cards--medium" role="listitem">
+          <img src="alien.webp" alt="Alien" />
+        </div>
+        <div class="cards cards--medium" role="listitem">
+          <img src="dexter.jpg" alt="Dexter" />
+        </div>
+        <div class="cards cards--medium" role="listitem">
+          <img src="prison.webp" alt="Prison Break" />
+        </div>
+      </div>
+
+      <h2>Catégorie Films</h2>
+      <div class="cards-list" role="list">
+      </div>
+
+      <h2>Catégorie Série</h2>
+      <div class="cards cards--list" role="list">
+        <div class="cards cards--thumb" role="listitem">
+          <img src="thebig.jpg" alt="Big Bang Theory" />
+        </div>
+        <div class="cards cards--thumb" role="listitem">
+          <img src="friends.avif" alt="Friends" />
+        </div>
+        <div class="cards cards--thumb" role="listitem">
+          <img src="rick&morty.jpg" alt="Rick & Morty" />
+        </div>
+        <div class="cards cards--thumb" role="listitem">
+          <img src="desperate.webp" alt="Desperate Housewives" />
+        </div>
+        <div class="cards cards--thumb" role="listitem">
+          <img src="strange.jpg" alt="Stranger Things" />
+        </div>
+        <div class="cards cards--thumb" role="listitem">
+          <img src="you.webp" alt="You" />
+        </div>
+        <div class="cards cards--thumb" role="listitem">
+          <img src="breaking.jpg" alt="Breaking Bad" />
+        </div>
+      </div>
+
+      <section class="carousel" aria-label="Gallery">
+        <ol class="carousel__viewport">
+          <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+            <div class="cards-list">
+              <div class="cards--thumb" role="listitem">
+                <img src="4 fantastic.webp" alt="4 Fantastic" />
+              </div>
+              <div class="cards--thumb" role="listitem">
+                <img src="hunger games.webp" alt="Hunger Games" />
+              </div>
+              <div class="cards--thumb" role="listitem">
+                <img src="miss.jpg" alt="Miss" />
+              </div>
+              <div class="cards--thumb" role="listitem">
+                <img src="seigneur.jpg" alt="Le Seigneur des Anneaux" />
+              </div>
+            </div>
+            <div class="carousel__snapper">
+              <a href="#carousel__slide4" class="carousel__prev">Go to last slide</a>
+              <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
+            </div>
+          </li>
+          <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <div class=" cards--thumb" role="listitem">
+          <img src="pirates.avif" alt="Pirates des Caraïbes" />
+        </div>
+        <div class=" cards--thumb" role="listitem">
+          <img src="narnia.jpg" alt="Narnia" />
+        </div>
+        <div class=" cards--thumb" role="listitem">
+          <img src="harrypotter.avif" alt="Harry Potter" />
+        </div>
+        <div class=" cards--thumb" role="listitem">
+          <img src="harrypotter.avif" alt="Harry Potter" />
+        </div>
+            <a href="#carousel__slide1" class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide3" class="carousel__next">Go to next slide</a>
+          </li>
+          <li id="carousel__slide3" tabindex="0" class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide2" class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide4" class="carousel__next">Go to next slide</a>
+          </li>
+          <li id="carousel__slide4" tabindex="0" class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide3" class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide1" class="carousel__next">Go to first slide</a>
+          </li>
+        </ol>
+        <aside class="carousel__navigation">
+          <ol class="carousel__navigation-list">
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide1" class="carousel__navigation-button">Go to slide 1</a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide2" class="carousel__navigation-button">Go to slide 2</a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide3" class="carousel__navigation-button">Go to slide 3</a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide4" class="carousel__navigation-button">Go to slide 4</a>
+            </li>
+          </ol>
+
+        </aside>
+
+
+      </section>
+
+      
+  </main>
+
+  <footer></footer>
+
+</body>
+
 </html>

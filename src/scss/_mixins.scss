@@ -1,0 +1,15 @@
+@mixin fade-up($distance: 5px, $duration: 0.2s) {
+	transition: transform $duration ease, background-color $duration ease;
+	will-change: transform;
+	&:hover {
+		transform: translateY(-$distance);
+		box-shadow: 0 4px 10px hsl(273, 96%, 45%);
+	}
+}
+
+@mixin center-flex($direction: row, $justify: center, $align: center) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+}

@@ -1,0 +1,42 @@
+@use 'components/components';
+@use 'mixins';
+@use 'variables' as *;
+
+main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+html, body {
+	height: 100%;
+}
+body {
+	background-color: $bg-dark;
+	color: $color-primary;
+	font-family: $font-stack-sans;
+}
+
+h1, h2 {
+	font-family: $font-stack-sans;
+	margin: 1rem 0 0.5rem;
+}
+h1 { font-size: x-large; }
+h2 { font-size: large; }
+
+.logo {
+	width: 100px;
+	cursor: pointer;
+}
+
+.section {
+	&--films, &--series {
+		margin-bottom: 1.5rem;
+	}
+}
+
+@keyframes bounce {
+	0% { transform: translateY(0); }
+	50% { transform: translateY(-3px); }
+	100% { transform: translateY(0); }
+}
+

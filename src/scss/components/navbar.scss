@@ -1,0 +1,19 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.navbar {
+	a {
+		color: $color-on-dark;
+		margin-right: 1.25rem;
+		text-decoration: none;
+	}
+}
+
+.top-bar {
+	@include center-flex(row, space-between, center);
+	padding: 0 2rem;
+	&__left {
+		@include center-flex(row, flex-start, center);
+		gap: 1rem;
+	}
+}

@@ -1,0 +1,10 @@
+@use '../variables' as *;
+
+
+.user-icon {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: $bg-muted;
+	cursor: pointer;
+}
