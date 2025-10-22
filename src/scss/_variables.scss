@@ -1,8 +1,33 @@
-$color-primary: #fff;
-$color-on-dark: #fff;
-$font-stack-sans: Arial, Helvetica, sans-serif;
-$bg-dark: #000;
-$bg-surface: #222;
-$bg-muted: #555;
-$bg-darker: #444;
-$accent-danger: #e53935;
+// Couleurs
+//$color-primary: #fff;
+//$color-on-dark: #fff;
+//$font-stack-sans: Arial, Helvetica, sans-serif;
+//$bg-dark: #000;
+//$bg-surface: #222;
+//$bg-muted: #555;
+//$bg-darker: #444;
+//$accent-danger: #e53935;
+
+// Couleurs
+$bg-dark: #251e3b;
+$text-light: #ffffff;
+$text-muted: #cccccc;
+$accent: #6d22f1;
+$overlay-bg: rgba(0, 0, 0, 0.8);
+
+// Breakpoints
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$large: 1200px;
+
+// Espacements
+$gap-small: 0.5rem;
+$gap-medium: 1rem;
+$gap-large: 1.5rem;
+$gap-xl: 2rem;
+
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-medium: 0.3s ease;
+$transition-slow: 0.5s ease;

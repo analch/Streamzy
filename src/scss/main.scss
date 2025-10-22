@@ -1,42 +1,61 @@
-@use 'components/components';
-@use 'mixins';
 @use 'variables' as *;
+@use 'mixins';
+@use 'components/components';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+	background-color: $bg-dark;
+	color: $text-light;
+	padding: 2rem 0;
+}
 
 main {
-    padding-left: 2rem;
-    padding-right: 2rem;
+	margin-top: 80px;
+	padding: 2rem 0;
 }
 
-html, body {
-	height: 100%;
-}
-body {
-	background-color: $bg-dark;
-	color: $color-primary;
-	font-family: $font-stack-sans;
-}
-
-h1, h2 {
-	font-family: $font-stack-sans;
-	margin: 1rem 0 0.5rem;
-}
-h1 { font-size: x-large; }
-h2 { font-size: large; }
 
 .logo {
 	width: 100px;
 	cursor: pointer;
 }
 
+
 .section {
-	&--films, &--series {
-		margin-bottom: 1.5rem;
-	}
+	background-color: aqua;
 }
 
-@keyframes bounce {
-	0% { transform: translateY(0); }
-	50% { transform: translateY(-3px); }
-	100% { transform: translateY(0); }
+.Films{
+	padding-left: 40px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
+.Séries{
+	padding-left: 40px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.Titre de film, .mini-titre{
+	font-size: 1rem;
+	color: $text-muted;
+	padding-left: 50px;
+}
+
+h2 {
+	font-size: 1.2rem;
+	margin-bottom: 0.2rem;
+	font-weight: 700;
+	padding-left: 50px;
+}
+
+.temps, .titre, .sous-titre {
+	margin: 4px 0; //haut, bas - gauche, droite//
+}

@@ -1,50 +1,194 @@
 @use '../variables' as *;
 @use '../mixins' as *;
 
-.cards {
-	&--hero {
-        @include center-flex(row, center, center);
-        width: 100%;
-        border-radius: 15px;
-        box-shadow: 0 4px 10px hsl(273, 96%, 45%);
-        cursor: pointer;
-        animation: bounce 0.6s;
-		background-color: $bg-surface;
-		border-radius: 15px;
-		img { display: block; max-width: 100%; height: auto; }
-		@include fade-up(5px, 0.25s);
-	}
+.movie-card {
+	flex: 1 1 0;
+	min-width: 0;
+	position: relative;
+	border-radius: 8px;
+	overflow: hidden;
+	background-color: #2a2a2a;
+	@include hover-scale(1.05);
+	cursor: pointer;
 
-	&-list {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
+	img {
 		width: 100%;
-		gap: 10px;
+		height: 350px;
+		aspect-ratio: 2/3;
+		object-fit: cover;
+		width:full;
+		display: block;
+		transition: transform $transition-medium;
 	}
 
+	&__overlay {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: linear-gradient(transparent, $overlay-bg);
+		color: $text-light;
+		padding: $gap-large $gap-medium $gap-medium;
+		transform: translateY(100%);
+		transition: transform $transition-medium;
 
-	&--thumb {
-		width: fit-content;
-		height: 20rem;
-		color: $color-on-dark;
-		@include center-flex(row, center, center);
-		transition: all 0.2s ease;
-		img { max-width: 100%; height: 100%; display: block; object-fit: cover }
-		@include fade-up(5px, 0.2s);
+		h3 {
+			font-size: 1.1rem;
+			margin-bottom: $gap-small;
+			font-weight: 600;
+		}
+
+		p {
+			font-size: 0.9rem;
+			color: $text-muted;
+		}
 	}
 
-	&--large {
-		width: 13cm;
-		height: 10cm;
-		@include center-flex(row, center, center);
-		border-radius: 15px;
-		box-shadow: 0 4px 10px hsl(273, 96%, 45%);
-		overflow: hidden;
-		img { max-width: 100%; height: auto; display: block; }
+	&:hover {
+		.movie-card__overlay {
+			transform: translateY(0);
+		}
+
+		img {
+			transform: scale(1.1);
+		}
+		&:hover {
+			border: 2px solid #fff;
+		}
 	}
 
-	&--danger {
-		@include fade-up(5px, 0.2s);
-		background-color: $accent-danger;
+	// Responsive adjustments
+	@media (max-width: $tablet) {
+		&__overlay {
+			padding: $gap-medium $gap-small $gap-small;
+
+			h3 {
+				font-size: 1rem;
+			}
+
+			p {
+				font-size: 0.8rem;
+			}
+		}
+	}
+
+	@media (max-width: $mobile) {
+		// Sur mobile, toujours afficher l'overlay
+		.movie-card__overlay {
+			transform: translateY(0);
+			background: $overlay-bg;
+		}
+
+		img {
+			filter: brightness(0.7);
+		}
+	}
+}
+
+.movie-card--large {
+  display: flex;
+  justify-content: column;
+  align-items: center;
+  max-width: 1200px;
+	width: 90%;
+  margin: 0 auto 0 auto;
+	border-radius: 16px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.25);
+  background: linear-gradient(90deg, #232323 60%, #2a2a2a 100%);
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex: 1 1 100%;
+    display: block;
+  }
+
+  .movie-card__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 2.5rem;
+    color: $text-light;
+    background: linear-gradient(90deg, rgba(35,35,35,0.7) 60%, rgba(42,42,42,0.9) 100%);
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    p {
+      font-size: 1.2rem;
+      color: $text-muted;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    img {
+      width: 100%;
+      height: 220px;
+      border-radius: 8px 8px 0 0;
+    }
+    .movie-card__overlay {
+      padding: 1.2rem;
+      h1 { font-size: 1.5rem; }
+      p { font-size: 1rem; }
+    }
+  }
+}
+
+.lecture {
+	display: flex;
+	gap: 15px;
+	justify-content: flex-start;
+	padding-left: 90px;
+	margin: 0 auto;
+
+}
+
+.carousel::-webkit-scrollbar {
+	display: none;
+}
+
+.card {
+	flex: 0 0 250px;
+	height: 150px;
+	background-color: #1c1c1c;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+	transition: border 0.2s;
+	cursor: pointer;
+
+	&:hover {
+		border: 2px solid #fff;
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+		border-radius: 10px;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 10px;
+		right: 10px;
+		bottom: 10px;
+		height: 2px;
+		background: #fff;
+		border-radius: 1px;
+		opacity: 0.8;
 	}
 }

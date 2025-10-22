@@ -1,15 +1,41 @@
-@mixin fade-up($distance: 5px, $duration: 0.2s) {
-	transition: transform $duration ease, background-color $duration ease;
-	will-change: transform;
+@use 'variables' as *;
+
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin button-reset {
+	background: none;
+	border: none;
+	cursor: pointer;
+	outline: none;
+}
+
+@mixin hover-scale($scale: 1.05) {
+	transition: transform $transition-medium;
+
 	&:hover {
-		transform: translateY(-$distance);
-		box-shadow: 0 4px 10px hsl(273, 96%, 45%);
+		transform: scale($scale);
 	}
 }
 
-@mixin center-flex($direction: row, $justify: center, $align: center) {
-	display: flex;
-	flex-direction: $direction;
-	justify-content: $justify;
-	align-items: $align;
+@mixin responsive-grid($mobile: 1, $tablet: 2, $desktop: 3, $large: 4) {
+	display: grid;
+	gap: $gap-medium;
+
+	grid-template-columns: repeat($mobile, 1fr);
+
+	@media (min-width: $tablet) {
+		grid-template-columns: repeat($tablet, 1fr);
+	}
+
+	@media (min-width: $desktop) {
+		grid-template-columns: repeat($desktop, 1fr);
+	}
+
+	@media (min-width: $large) {
+		grid-template-columns: repeat($large, 1fr);
+	}
 }

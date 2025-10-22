@@ -1,10 +1,46 @@
 @use '../variables' as *;
 
-
 .user-icon {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	background-color: $bg-muted;
-	cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  transition: transform $transition-fast;
+
+  img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
+
+.search-icon {
+  width: 32px; //largeur//
+  height: 32px; //hauteur//
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: transform $transition-fast;
+
+  img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+

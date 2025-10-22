@@ -1,19 +1,51 @@
 @use '../variables' as *;
 @use '../mixins' as *;
 
-.navbar {
-	a {
-		color: $color-on-dark;
-		margin-right: 1.25rem;
-		text-decoration: none;
-	}
+header {
+  background-color: rgba(20, 11, 37, 0.84);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
 }
 
 .top-bar {
-	@include center-flex(row, space-between, center);
-	padding: 0 2rem;
-	&__left {
-		@include center-flex(row, flex-start, center);
-		gap: 1rem;
-	}
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.navbar {
+  display: flex;
+  gap: 1rem;
+  font-size: 11px;
+
+  a {
+    color: $text-light;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color $transition-fast;
+
+    &:hover,
+    &[aria-current="page"] {
+      color: $accent;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    gap: 1rem;
+
+    a {
+      font-size: 0.9rem;
+    }
+  }
 }
