@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>StreamZy</title>
+    <link rel="icon" type="icon logo" href="mini logo.jpg">
+    <link rel="stylesheet" href="/src/scss/main.scss">
+    <link rel="stylesheet" href="src/scss/components/card.scss">
+</head>
+
+<body>
+<header>
+    <div class="top-bar">
+        <div class="top-bar__left">
+            <img src="logo.png" alt="logo" class="logo"/>
+            <nav class="navbar">
+                <a href="/" aria-current="page">Accueil</a>
+                <a href="/series">Séries</a>
+                <a href="/films">Films</a>
+                <a href="/ma liste">Ma liste</a>
+                <a href="/nouveautes">Nouveautés</a>
+            </nav>
+        </div>
+        <div class="top-bar__right">
+            <div class="search-icon" role="button">
+                <img src="loupe.png" alt="Recherche"/>
+            </div>
+            <div class="user-icon" role="button">
+                <img src="icon user.png" alt="icon"/>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<main>
+    <a href="/futurama" class="movie-card movie-card--large">
+        <img src="futurama.webp" alt="Futurama"/>
+        <span class="movie-card__overlay" style="display: flex; flex-direction: column; align-items: flex-start;">
+            <img src="logo futurama.png" alt="Logo Futurama"/>
+            <span>Découvrez la série culte du futur !</span>
+            <span>Comédie - Animation</span>
+            <span>1999</span>
+        </span>
+    </a>
+
+    <div class="Films">
+        <h2>Reprendre la lecture</h2>
+    </div>
+
+    <div class="lecture">
+        <div class="card-wrapper">
+            <div class="card">
+                <img src="thebigbang.jpg" alt="image"/>
+            </div>
+            <p class="temps" style="font-size: 10px; opacity: 0.8;"> Il reste 1 heure </p>
+            <p class="titre" style="font-size: 14px; opacity: 1;">The Big Bang Theory</p>
+            <p class="sous-titre" style="font-size: 10px; opacity: 0.6;"> épisode 12 saison 8 - Réajustement de
+                l'amour </p>
+        </div>
+        <div class="card-wrapper">
+            <div class="card">
+                <img src="malcolm.jpg" alt="image"/>
+            </div>
+            <p class="temps" style="font-size: 10px; opacity: 0.8;"> Il reste 34 minutes </p>
+            <p class="titre" style="font-size: 14px; opacity: 1;">Malcolm</p>
+            <p class="sous-titre" style="font-size: 10px; opacity: 0.6;"> épisode 2 saison 1 - Alerte Rouge </p>
+        </div>
+        <div class="card-wrapper">
+            <div class="card">
+                <img src="rush.avif" alt="image"/>
+            </div>
+            <p class="temps" style="font-size: 10px; opacity: 0.8;"> Il reste 54 minutes </p>
+            <p class="titre" style="font-size: 14px; opacity: 1;">Rush</p>
+            <p class="sous-titre" style="font-size: 10px; opacity: 0.6;"> Action et Drame </p>
+        </div>
+        <div class="card-wrapper">
+            <div class="card">
+                <img src="coraline.jpg" alt="image"/>
+            </div>
+            <p class="temps" style="font-size: 10px; opacity: 0.8;"> Il reste 12 minutes </p>
+            <p class="titre" style="font-size: 14px; opacity: 1;">Coraline</p>
+            <p class="sous-titre" style="font-size: 10px; opacity: 0.6;"> Drame et Parodie </p>
+        </div>
+    </div>
+
+    <section>
+        <div class="Films">
+            <h2>Séries d'animation</h2>
+            <p class="mini-titre">Une section d'humour à regarder sans modération !</p>
+        </div>
+        <div class="carousel">
+            <div class="carousel__container">
+                <!-- Navigation invisible -->
+                <input type="radio" name="carousel1" id="carousel1-slide1" class="carousel__input" checked>
+                <input type="radio" name="carousel1" id="carousel1-slide2" class="carousel__input">
+                <input type="radio" name="carousel1" id="carousel1-slide3" class="carousel__input">
+
+                <!-- Boutons de navigation -->
+                <div class="carousel__controls">
+                    <label for="carousel1-slide1" class="carousel__btn carousel__btn--1">‹</label>
+                    <label for="carousel1-slide2" class="carousel__btn carousel__btn--2">‹</label>
+                    <label for="carousel1-slide3" class="carousel__btn carousel__btn--3">‹</label>
+
+                    <label for="carousel1-slide2" class="carousel__btn carousel__btn--next-1">›</label>
+                    <label for="carousel1-slide3" class="carousel__btn carousel__btn--next-2">›</label>
+                    <label for="carousel1-slide1" class="carousel__btn carousel__btn--next-3">›</label>
+                </div>
+
+                <!-- Indicateurs -->
+                <div class="carousel__indicators">
+                    <label for="carousel1-slide1" class="carousel__indicator"></label>
+                    <label for="carousel1-slide2" class="carousel__indicator"></label>
+                    <label for="carousel1-slide3" class="carousel__indicator"></label>
+                </div>
+
+                <div class="carousel__track">
+                    <div class="carousel__slide">
+                        <div class="movie-card">
+                            <img src="american dad.jpg" alt="Film 1">
+                            <div class="movie-card__overlay">
+                                <h3>American Dad</h3>
+                                <p>2005</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="family guy.jpg" alt="Film 2">
+                            <div class="movie-card__overlay">
+                                <h3>Family Guy</h3>
+                                <p>1999</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="les simpson.jpg" alt="Film 3">
+                            <div class="movie-card__overlay">
+                                <h3>Les Simpson</h3>
+                                <p>2007</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="rick&morty.jpg" alt="Film 4">
+                            <div class="movie-card__overlay">
+                                <h3>Rick & Morty </h3>
+                                <p>2013</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel__slide">
+                        <div class="movie-card">
+                            <img src="futu.webp" alt="Film 5">
+                            <div class="movie-card__overlay">
+                                <h3>Futurama</h3>
+                                <p>1999</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="bob.webp" alt="Film 6">
+                            <div class="movie-card__overlay">
+                                <h3>Bob's Burgers</h3>
+                                <p>2011</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="cleveland.webp" alt="Film 7">
+                            <div class="movie-card__overlay">
+                                <h3>The Cleveland Family</h3>
+                                <p>2009</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="https://via.placeholder.com/300x450/82E0AA/FFFFFF?text=Film+8" alt="Film 8">
+                            <div class="movie-card__overlay">
+                                <h3>Titre du Film 8</h3>
+                                <p>2024</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel__slide">
+                        <div class="movie-card">
+                            <img src="https://via.placeholder.com/300x450/F1948A/FFFFFF?text=Film+9" alt="Film 9">
+                            <div class="movie-card__overlay">
+                                <h3>Titre du Film 9</h3>
+                                <p>2024</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="https://via.placeholder.com/300x450/58D68D/FFFFFF?text=Film+10" alt="Film 10">
+                            <div class="movie-card__overlay">
+                                <h3>Titre du Film 10</h3>
+                                <p>2024</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="https://via.placeholder.com/300x450/5DADE2/FFFFFF?text=Film+11" alt="Film 11">
+                            <div class="movie-card__overlay">
+                                <h3>Titre du Film 11</h3>
+                                <p>2024</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="https://via.placeholder.com/300x450/AF7AC5/FFFFFF?text=Film+12" alt="Film 12">
+                            <div class="movie-card__overlay">
+                                <h3>Titre du Film 12</h3>
+                                <p>2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Films">
+            <h2>Séries</h2>
+            <p class="mini-titre">Notre séléction pour vous !</p>
+        </div>
+
+        <div class="carousel">
+            <div class="carousel__container">
+                <!-- Navigation invisible -->
+                <input type="radio" name="carousel2" id="carousel2-slide1" class="carousel__input" checked>
+                <input type="radio" name="carousel2" id="carousel2-slide2" class="carousel__input">
+                <input type="radio" name="carousel2" id="carousel2-slide3" class="carousel__input">
+
+                <!-- Boutons de navigation -->
+                <div class="carousel__controls">
+                    <label for="carousel2-slide1" class="carousel__btn carousel__btn--1">‹</label>
+                    <label for="carousel2-slide2" class="carousel__btn carousel__btn--2">‹</label>
+                    <label for="carousel2-slide3" class="carousel__btn carousel__btn--3">‹</label>
+
+                    <label for="carousel2-slide2" class="carousel__btn carousel__btn--next-1">›</label>
+                    <label for="carousel2-slide3" class="carousel__btn carousel__btn--next-2">›</label>
+                    <label for="carousel2-slide1" class="carousel__btn carousel__btn--next-3">›</label>
+                </div>
+
+                <!-- Indicateurs -->
+                <div class="carousel__indicators">
+                    <label for="carousel2-slide1" class="carousel__indicator"></label>
+                    <label for="carousel2-slide2" class="carousel__indicator"></label>
+                    <label for="carousel2-slide3" class="carousel__indicator"></label>
+                </div>
+
+                <div class="carousel__track">
+                    <div class="carousel__slide">
+                        <div class="movie-card">
+                            <img src="walking dead.jpg" alt="Film 1">
+                            <div class="movie-card__overlay">
+                                <h3>The Walking Dead</h3>
+                                <p>2010</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="break.jpg" alt="Film 2">
+                            <div class="movie-card__overlay">
+                                <h3>Dexter</h3>
+                                <p>2008</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="peaky blinders.jpg" alt="Film 3">
+                            <div class="movie-card__overlay">
+                                <h3>Shameless</h3>
+                                <p>2007</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="dexter.jpg" alt="Film 4">
+                            <div class="movie-card__overlay">
+                                <h3>Dexter</h3>
+                                <p>2006</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel__slide">
+                        <div class="movie-card">
+                            <img src="desperate.webp" alt="Film 5">
+                            <div class="movie-card__overlay">
+                                <h3>Desperate Housewives</h3>
+                                <p>2004</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="you.webp" alt="Film 6">
+                            <div class="movie-card__overlay">
+                                <h3>YOU</h3>
+                                <p>2018</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="strange.jpg" alt="Film 7">
+                            <div class="movie-card__overlay">
+                                <h3>Stranger Things</h3>
+                                <p>2016</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="prison.jpg" alt="Film 8">
+                            <div class="movie-card__overlay">
+                                <h3>Prison Break</h3>
+                                <p>2005</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel__slide">
+                        <div class="movie-card">
+                            <img src="thebig.jpg" alt="Film 9">
+                            <div class="movie-card__overlay">
+                                <h3>The Big Bang Theory</h3>
+                                <p>2007</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="shameless.webp" alt="Film 10">
+                            <div class="movie-card__overlay">
+                                <h3>Shameless</h3>
+                                <p>2007</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="gossip girl.jpg" alt="Film 11">
+                            <div class="movie-card__overlay">
+                                <h3>Gossip Girl</h3>
+                                <p>2007</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="orange.jpg" alt="Film 12">
+                            <div class="movie-card__overlay">
+                                <h3>Orange in the New Black</h3>
+                                <p>2013</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Films">
+            <h2>Inspirés de livres </h2>
+            <p class="mini-titre">Pour tous les âges !</p>
+        </div>
+
+        <div class="carousel">
+            <div class="carousel__container">
+                <!-- Navigation invisible -->
+                <input type="radio" name="carousel3" id="carousel3-slide1" class="carousel__input" checked>
+                <input type="radio" name="carousel3" id="carousel3-slide2" class="carousel__input">
+                <input type="radio" name="carousel3" id="carousel3-slide3" class="carousel__input">
+
+                <!-- Boutons de navigation -->
+                <div class="carousel__controls">
+                    <label for="carousel3-slide1" class="carousel__btn carousel__btn--1">‹</label>
+                    <label for="carousel3-slide2" class="carousel__btn carousel__btn--2">‹</label>
+                    <label for="carousel3-slide3" class="carousel__btn carousel__btn--3">‹</label>
+                    <label for="carousel3-slide2" class="carousel__btn carousel__btn--next-1">›</label>
+                    <label for="carousel3-slide3" class="carousel__btn carousel__btn--next-2">›</label>
+                    <label for="carousel3-slide1" class="carousel__btn carousel__btn--next-3">›</label>
+                </div>
+
+                <!-- Indicateurs -->
+                <div class="carousel__indicators">
+                    <label for="carousel3-slide1" class="carousel__indicator"></label>
+                    <label for="carousel3-slide2" class="carousel__indicator"></label>
+                    <label for="carousel3-slide3" class="carousel__indicator"></label>
+                </div>
+
+                <div class="carousel__track">
+                    <div class="carousel__slide">
+                        <div class="movie-card">
+                            <img src="le cercle.webp" alt="Film 1">
+                            <div class="movie-card__overlay">
+                                <h3>Le Cercle des poètes disparus</h3>
+                                <p>1989</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="etoiles.webp" alt="Film 2">
+                            <div class="movie-card__overlay">
+                                <h3>Nos étoils contraires</h3>
+                                <p>2014</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="alice.webp" alt="Film 3">
+                            <div class="movie-card__overlay">
+                                <h3>Alice au pays de merveilles</h3>
+                                <p>2010</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="narnia.webp" alt="Film 4">
+                            <div class="movie-card__overlay">
+                                <h3>Narnia</h3>
+                                <p>2005</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel__slide">
+                        <div class="movie-card">
+                            <img src="enzo.webp" alt="Film 5">
+                            <div class="movie-card__overlay">
+                                <h3>Dans les yeux d'Enzo</h3>
+                                <p>2019</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="harry potter.avif" alt="Film 6">
+                            <div class="movie-card__overlay">
+                                <h3>Harry Potter</h3>
+                                <p>2001</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="divergente.jpg" alt="Film 7">
+                            <div class="movie-card__overlay">
+                                <h3>Divergent</h3>
+                                <p>2014</p>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <img src="jack.jpg" alt="Film 8">
+                            <div class="movie-card__overlay">
+                                <h3>Jack et la mécanique du coeur</h3>
+                                <p>2013</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<footer></footer>
+
+</body>
+
+</html>
