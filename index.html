@@ -9,6 +9,7 @@
     <link rel="icon" type="icon logo" href="mini logo.jpg">
     <link rel="stylesheet" href="/src/scss/main.scss">
     <link rel="stylesheet" href="src/scss/components/card.scss">
+    <link rel="stylesheet" href="src/scss/footer.scss">
 </head>
 
 <body>
@@ -37,54 +38,62 @@
 </header>
 
 <main>
-    <a href="/futurama" class="movie-card movie-card--large">
-        <img src="futurama.webp" alt="Futurama"/>
-        <span class="movie-card__overlay" style="display: flex; flex-direction: column; align-items: flex-start;">
-            <img src="logo futurama.png" alt="Logo Futurama"/>
-            <span>Découvrez la série culte du futur !</span>
-            <span>Comédie - Animation</span>
-            <span>1999</span>
-        </span>
-    </a>
-
+    <section class="space-y">
+        <div class="movie-card movie-card--large">
+            <img src="futurama.webp" alt="Futurama"/>
+            <span class="movie-card__overlay"
+                  style="display: flex; flex-direction: column; align-items: flex-start; font-family: 'Bebas Neue';">
+                <h1 style="color: white">FUTURAMA</h1>
+                <span style="font-size: 25px; color: white;">Découvrez la série culte du futur !</span>
+                <span style="font-size: 20px; color: white;">Comédie * Animation</span>
+                <span style="font-size: 15px; color: white;">1999 - 2025</span>
+                <div class="bouton">
+                    <a class="bouton-1" href="https://www.youtube.com/watch?v=zxiDBDMn7sE">Lecture</a>
+                    <a class="bouton-2" href="pagefuturama.html">Voir plus</a>
+                </div>
+            </span>
+        </div>
+    </section>
     <div class="Films">
         <h2>Reprendre la lecture</h2>
     </div>
 
     <div class="lecture">
-        <div class="card-wrapper">
-            <div class="card">
+        <a class="card-wrapper" href="pagebigbangtheory.html">
+            <div class="card" href="pagebigbangtheory.hhtml">
                 <img src="thebigbang.jpg" alt="image"/>
             </div>
-            <p class="temps" style="font-size: 10px; opacity: 0.8;"> Il reste 1 heure </p>
-            <p class="titre" style="font-size: 14px; opacity: 1;">The Big Bang Theory</p>
-            <p class="sous-titre" style="font-size: 10px; opacity: 0.6;"> épisode 12 saison 8 - Réajustement de
-                l'amour </p>
-        </div>
-        <div class="card-wrapper">
-            <div class="card">
+            <p class="temps" style="font-size: 10px; opacity: 0.8; color: white;"> Il reste 1 heure </p>
+            <p class="titre" style="font-size: 16px; opacity: 1; font-family: 'Bebas Neue';color: white;">The Big Bang
+                Theory</p>
+            <p class="sous-titre" style="font-size: 10px; opacity: 0.6;color: white;"> épisode 13 saison 10 -
+                Réajustement amoureux </p>
+        </a>
+        <a class="card-wrapper" href="pagemalcolm.html">
+            <div class="card" href="pagemalcolm.html">
                 <img src="malcolm.jpg" alt="image"/>
             </div>
-            <p class="temps" style="font-size: 10px; opacity: 0.8;"> Il reste 34 minutes </p>
-            <p class="titre" style="font-size: 14px; opacity: 1;">Malcolm</p>
-            <p class="sous-titre" style="font-size: 10px; opacity: 0.6;"> épisode 2 saison 1 - Alerte Rouge </p>
-        </div>
-        <div class="card-wrapper">
-            <div class="card">
+            <p class="temps" style="font-size: 10px; opacity: 0.8; color: white;"> Il reste 34 minutes </p>
+            <p class="titre" style="font-size: 16px; opacity: 1; font-family: 'Bebas Neue';color: white;">Malcolm</p>
+            <p class="sous-titre" style="font-size: 10px; opacity: 0.6;color: white;"> épisode 2 saison 1 - Alerte
+                Rouge </p>
+        </a>
+        <a class="card-wrapper" href="pagerush.html">
+            <div class="card" href="pagerush.html">
                 <img src="rush.avif" alt="image"/>
             </div>
-            <p class="temps" style="font-size: 10px; opacity: 0.8;"> Il reste 54 minutes </p>
-            <p class="titre" style="font-size: 14px; opacity: 1;">Rush</p>
-            <p class="sous-titre" style="font-size: 10px; opacity: 0.6;"> Action et Drame </p>
-        </div>
-        <div class="card-wrapper">
-            <div class="card">
+            <p class="temps" style="font-size: 10px; opacity: 0.8;color: white;"> Il reste 54 minutes </p>
+            <p class="titre" style="font-size: 16px; opacity: 1; font-family: 'Bebas Neue';color: white;">Rush</p>
+            <p class="sous-titre" style="font-size: 10px; opacity: 0.6;color: white;"> Action et Drame </p>
+        </a>
+        <a class="card-wrapper" href="pagecoraline.html">
+            <div class="card" pagecoraline.html>
                 <img src="coraline.jpg" alt="image"/>
             </div>
-            <p class="temps" style="font-size: 10px; opacity: 0.8;"> Il reste 12 minutes </p>
-            <p class="titre" style="font-size: 14px; opacity: 1;">Coraline</p>
-            <p class="sous-titre" style="font-size: 10px; opacity: 0.6;"> Drame et Parodie </p>
-        </div>
+            <p class="temps" style="font-size: 10px; opacity: 0.8;color: white;"> Il reste 12 minutes </p>
+            <p class="titre" style="font-size: 16px; opacity: 1; font-family: 'Bebas Neue';color: white;">Coraline</p>
+            <p class="sous-titre" style="font-size: 10px; opacity: 0.6;color: white;"> Drame et Parodie </p>
+        </a>
     </div>
 
     <section>
@@ -440,7 +449,16 @@
     </section>
 </main>
 
-<footer></footer>
+<footer>
+    <div class="footer-container">
+        <p>© 2025 Un site web de qualité. Profitez.</p>
+        <div class="footer-links">
+            <a href="#">Mentions légales</a>
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+</footer>
 
 </body>
 

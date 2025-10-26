@@ -1,29 +1,30 @@
 @use 'variables' as *;
 
 @mixin flex-center {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @mixin button-reset {
-	background: none;
-	border: none;
-	cursor: pointer;
-	outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
 @mixin hover-scale($scale: 1.05) {
-	transition: transform $transition-medium;
+  transition: transform $transition-medium;
 
-	&:hover {
-		transform: scale($scale);
-	}
+  &:hover {
+    transform: scale($scale);
+  }
 }
 
-@mixin responsive-grid($mobile: 1, $tablet: 2, $desktop: 3, $large: 4) {
-	display: grid;
-	gap: $gap-medium;
+// Responsive grid mixin //
+@mixin responsive-grid() {
+  display: grid;
+  gap: $gap-medium;
 
 	grid-template-columns: repeat($mobile, 1fr);
 
@@ -40,8 +41,153 @@
 	}
 }
 
+
+//responsive infos//
 @media (max-width: 768px) {
-	.infos {
-		flex-direction: column;
-	}
+  .infos {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+  }
 }
+
+//responsive navbar//
+@media (max-width: 480px) {
+  .top-bar {
+    height: 8vh;
+    padding: 0 0.5rem;
+
+    &__left {
+      gap: 1rem;
+    }
+  }
+
+  .navbar {
+    top: 8vh;
+    height: calc(100vh - 8vh);
+  }
+}
+
+@media detail-view {
+  .media-detail {
+    max-height: none;
+
+    &__overlay {
+      max-height: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .description {
+    max-width: 100%;
+
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .description {
+    p {
+      font-size: 11px;
+    }
+
+    p:first-child {
+      font-size: 10px;
+    }
+  }
+
+  .bouton {
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+
+    a {
+      width: 100%;
+      text-align: center;
+      display: block;
+    }
+  }
+}
+
+//responsive media detail//
+@media (max-width: 768px) {
+  .media-detail {
+    max-height: none;
+    overflow: visible;
+
+    &__background {
+      position: absolute;
+      height: 70vh;
+      top: 0;
+      left: 0;
+    }
+
+    &__overlay {
+      position: relative;
+      min-height: 70vh;
+      height: auto;
+      overflow: visible;
+      padding: 3rem 1rem 3rem 1rem;
+      gap: 0.8rem;
+      justify-content: flex-start;
+
+      &-logo {
+        max-width: 8rem;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .bouton-retour {
+    padding: 6px 10px 6px 12px;
+    font-size: 13px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+  }
+
+  .informations {
+    gap: 0.5rem;
+    margin: 0;
+
+    li {
+      font-size: 11px;
+      padding: 0.2rem 0.5rem;
+    }
+  }
+
+  .description {
+    max-width: 100%;
+    margin: 0;
+
+    p {
+      font-size: 10px;
+    }
+  }
+
+  .bouton {
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 3rem;
+
+    a {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+//reponsive fil d'ariane//
+@media (max-width: 768px) {
+  .fil-ariane {
+    padding: 0.8rem;
+    font-size: 10px;
+  }
+}
+

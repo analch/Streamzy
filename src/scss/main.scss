@@ -57,46 +57,6 @@ h2 {
   margin: 4px 0; //haut, bas - gauche, droite//
 }
 
-.bouton-1 {
-  background-color: rgba(255, 255, 255, 0.9);
-  color: rgba(0, 0, 0, 0.75);
-  border: none;
-  opacity: 90%;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 18px;
-  font-family: 'Bebas Neue';
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-    color: rgba(0, 0, 0, 0.75);
-  }
-}
-
-.bouton-2 {
-  background-color: rgb(42, 42, 42);
-  color: rgba(255, 255, 255, 0.9);
-  border: none;
-  opacity: 90%;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 18px;
-  font-family: 'Bebas Neue';
-
-  &:hover {
-    background-color: rgb(58, 58, 58);
-    color: rgba(255, 255, 255, 0.9);
-  }
-}
-
-.width {
-  position: absolute;
-  width: 100%;
-  opacity: 55%;
-}
-
 .titre-futurama {
   position: relative;
   top: 50px;
@@ -116,6 +76,7 @@ li {
   justify-content: center;
 }
 
+//infos supplémentaires page film//
 .informations {
   position: relative;
   top: 70px;
@@ -132,6 +93,7 @@ li {
   @include responsive-grid();
 }
 
+//saison et description//
 .saison {
   position: relative;
   top: 70px;
@@ -176,28 +138,6 @@ li {
   top: 120px;
 }
 
-
-
-.card-episode {
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 0.5rem;
-  height: 100%;
-}
-
-.card-episode img {
-  width: 100%;
-  max-height: 10rem;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: border 0.2s;
-}
-
-.card-episode img:hover {
-  border: 2px solid #fff;
-}
-
 .titre-episode {
   font-size: 17px;
   font-family: 'Bebas Neue';
@@ -209,22 +149,14 @@ li {
   color: #ffffff;
 }
 
-.bouton {
-  margin-top: 10px;
-  display: flex;
-  gap: 10px;
-  position: relative;
-  top: 80px;
-  padding-left: 20px;
+.divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 1rem 0;
 }
 
-.divider{
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.9);
-    margin: 1rem 0;
-}
-
-.infos{
+//infos supplémentaire films//
+.infos {
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -246,3 +178,34 @@ li {
   font-weight: bold;
 }
 
+//fil d'ariane//
+.media-detail--top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1rem;
+}
+
+.fil-ariane {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+
+  .fleche {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+  }
+
+  .actuel {
+    color: #fff;
+    font-weight: 600;
+  }
+}

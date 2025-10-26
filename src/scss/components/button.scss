@@ -1,2 +1,73 @@
+@use '../mixins';
+
+//bouton retour//
+.bouton-retour {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  color: #333;
+  font-family: "Bebas Neue";
+  cursor: pointer;
+  transition: background 0.2s ease;
+  z-index: 1000;
+  margin: 20px;
+  opacity: 90%;
+}
+
+.bouton-retour:hover {
+  background: #f0f0f0;
+}
+
+//bouton lecture et bande annonce//
+.bouton {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  top: 80px;
+  padding-left: 20px;
+}
+
+.bouton-1 {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.75);
+  border: none;
+  opacity: 90%;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Bebas Neue';
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgba(0, 0, 0, 0.75);
+  }
+}
+
+.bouton-2 {
+  background-color: rgb(42, 42, 42);
+  color: rgba(255, 255, 255, 0.9);
+  border: none;
+  opacity: 90%;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Bebas Neue';
+
+  &:hover {
+    background-color: rgb(58, 58, 58);
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
 
 
