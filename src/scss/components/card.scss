@@ -2,24 +2,22 @@
 @use '../mixins' as *;
 
 .movie-card {
-	flex: 1 1 0;
-	min-width: 0;
-	position: relative;
-	border-radius: 8px;
-	overflow: hidden;
-	background-color: #2a2a2a;
-	@include hover-scale(1.05);
-	cursor: pointer;
+  flex: 1;
+  min-width: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #2a2a2a;
+  @include hover-scale(1.05);
+  cursor: pointer;
 
-	img {
-		width: 100%;
-		height: 350px;
-		aspect-ratio: 2/3;
-		object-fit: cover;
-		width:full;
-		display: block;
-		transition: transform $transition-medium;
-	}
+  img {
+    height: 350px;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    transition: transform $transition-medium;
+  }
 
 	&__overlay {
 		position: absolute;
@@ -92,10 +90,10 @@
   max-width: 1200px;
 	width: 90%;
   margin: 0 auto 0 auto;
-	border-radius: 16px;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.25);
+  border-radius: 16px;
+  top: 20px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.25);
   background: linear-gradient(90deg, #232323 60%, #2a2a2a 100%);
-  overflow: hidden;
 
   img {
     width: 100%;
@@ -146,12 +144,11 @@
 }
 
 .lecture {
-	display: flex;
-	gap: 15px;
-	justify-content: flex-start;
-	padding-left: 90px;
-	margin: 0 auto;
-
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+  padding-left: 90px;
+  margin: 0 auto;
 }
 
 .carousel::-webkit-scrollbar {
@@ -192,3 +189,5 @@
 		opacity: 0.8;
 	}
 }
+
+

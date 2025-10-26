@@ -3,59 +3,246 @@
 @use 'components/components';
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: 'Arial', sans-serif;
-	background-color: $bg-dark;
-	color: $text-light;
-	padding: 2rem 0;
+  font-family: 'Arial', sans-serif;
+  background-color: $bg-dark;
+  color: $text-light;
+  padding: 0;
 }
 
-main {
-	margin-top: 80px;
-	padding: 2rem 0;
+.container {
+  padding: 0 2rem;
 }
 
 
 .logo {
-	width: 100px;
-	cursor: pointer;
+  width: 100px;
+  cursor: pointer;
 }
 
-
-.section {
-	background-color: aqua;
+.Films {
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
 }
 
-.Films{
-	padding-left: 40px;
-	padding-top: 20px;
-	padding-bottom: 20px;
+.Séries {
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
 }
 
-.Séries{
-	padding-left: 40px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-.Titre de film, .mini-titre{
-	font-size: 1rem;
-	color: $text-muted;
-	padding-left: 50px;
+.Titre de film, .mini-titre {
+  font-size: 1rem;
+  color: $text-muted;
+  padding-left: 50px;
 }
 
 h2 {
-	font-size: 1.2rem;
-	margin-bottom: 0.2rem;
-	font-weight: 700;
-	padding-left: 50px;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  font-weight: 700;
+  padding-left: 50px;
+  font-family: 'Bebas Neue';
 }
 
 .temps, .titre, .sous-titre {
-	margin: 4px 0; //haut, bas - gauche, droite//
+  margin: 4px 0; //haut, bas - gauche, droite//
 }
+
+.bouton-1 {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.75);
+  border: none;
+  opacity: 90%;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Bebas Neue';
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgba(0, 0, 0, 0.75);
+  }
+}
+
+.bouton-2 {
+  background-color: rgb(42, 42, 42);
+  color: rgba(255, 255, 255, 0.9);
+  border: none;
+  opacity: 90%;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Bebas Neue';
+
+  &:hover {
+    background-color: rgb(58, 58, 58);
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+.width {
+  position: absolute;
+  width: 100%;
+  opacity: 55%;
+}
+
+.titre-futurama {
+  position: relative;
+  top: 50px;
+  left: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  width: 3%;
+  background-color: rgba(255, 255, 255, 0.39);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+}
+
+.informations {
+  position: relative;
+  top: 70px;
+  padding-left: 20px;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.lecture-episode {
+  gap: 2rem;
+  color: white;
+  @include responsive-grid();
+}
+
+.saison {
+  position: relative;
+  top: 70px;
+  padding-left: 20px;
+}
+
+.description {
+  position: relative;
+  top: 80px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgba(20, 11, 37, 0.68);
+  border: none;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-family: "Bebas Neue";
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+  white-space: nowrap;
+}
+
+.dropdown::after {
+  content: "▾";
+  font-size: 18px;
+  color: rgba(20, 11, 37, 0.68);
+}
+
+.ligne {
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 0 20px;
+  top: 120px;
+}
+
+
+
+.card-episode {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 0.5rem;
+  height: 100%;
+}
+
+.card-episode img {
+  width: 100%;
+  max-height: 10rem;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: border 0.2s;
+}
+
+.card-episode img:hover {
+  border: 2px solid #fff;
+}
+
+.titre-episode {
+  font-size: 17px;
+  font-family: 'Bebas Neue';
+  color: #fff;
+}
+
+.sous-titre-episode {
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.bouton {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  top: 80px;
+  padding-left: 20px;
+}
+
+.divider{
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 1rem 0;
+}
+
+.infos{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.infos-film {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.infos-film:first-child {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.infos-film:hover {
+  color: #ffffff;
+  font-weight: bold;
+}
+

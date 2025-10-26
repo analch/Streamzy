@@ -27,7 +27,8 @@ header {
 .navbar {
   display: flex;
   gap: 1rem;
-  font-size: 11px;
+  font-size: 16px;
+  font-family: 'Bebas Neue', serif;
 
   a {
     color: $text-light;

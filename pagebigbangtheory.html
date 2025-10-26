@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>StreamZy</title>
+    <link rel="icon" type="icon logo" href="mini logo.jpg">
+    <link rel="stylesheet" href="/src/scss/main.scss">
+    <link rel="stylesheet" href="src/scss/components/card.scss">
+    <link rel="stylesheet" href="src/scss/footer.scss">
+</head>
+
+<body>
+<header class="top-bar">
+    <div class="top-bar__container">
+        <div class="top-bar__left">
+            <img src="logo.png" alt="logo" class="logo"/>
+            <nav class="navbar">
+                <a href="/" aria-current="page">Accueil</a>
+                <a href="/series">Séries</a>
+                <a href="/films">Films</a>
+                <a href="/ma liste">Ma liste</a>
+                <a href="/nouveautes">Nouveautés</a>
+            </nav>
+        </div>
+        <div class="top-bar__right">
+            <div class="search-icon" role="button">
+                <img src="loupe.png" alt="Recherche"/>
+            </div>
+            <div class="user-icon" role="button">
+                <img src="icon user.png" alt="icon"/>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="media-detail">
+        <img class="media-detail__background" src="fond-big.jpg" alt="Fond de page The big bang theory"/>
+        <div class="media-detail__overlay">
+            <img src="logo-big.png" class="media-detail__overlay-logo"
+                 alt="Logo de la série The big bang theory"/>
+
+            <ul class="informations">
+                <li>12+</li>
+                <li>CC</li>
+                <li>HD</li>
+            </ul>
+            <div class="description">
+                <p class="description-sous-titre-episode"
+                   style="font-size: 12px; opacity: 0.6; font-family: 'Bebas Neue';">
+                    2007 - 2017 / 13 saisons </p>
+                <p class="description-sous-titre-episode" style="font-size: 10px; opacity: 0.6;"> Comédie, Humour</p>
+            </div>
+            <div class="description">
+                <p class="description-titre-episode" style="font-size: 20px; font-family: 'Bebas Neue'; color: white;">
+                    E13
+                    S10 - Réajustement amoureux</p>
+                <p class="description-sous-titre-episode" style="font-size: 14px; color: white;"> Penny reproche à
+                    Leonard
+                    de ne plus faire d’efforts dans leur relation. Sheldon tente de remonter le moral de Leonard et
+                    propose
+                    son aide au couple.</p>
+            </div>
+            <div class="bouton">
+                <a class="bouton-1" href="https://www.youtube.com/watch?v=zxiDBDMn7sE">Lecture</a>
+                <a class="bouton-2" href="pagefuturama.html">Reprendre au début</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="navigation-container">
+            <button class="navigation-container__button" data-section="1">S1</button>
+            <button class="navigation-container__button" data-section="2">S2</button>
+            <button class="navigation-container__button" data-section="3">S3</button>
+            <button class="navigation-container__button" data-section="4">S4</button>
+            <button class="navigation-container__button" data-section="5">S5</button>
+            <button class="navigation-container__button" data-section="6">S6</button>
+            <button class="navigation-container__button" data-section="7">S7</button>
+            <button class="navigation-container__button" data-section="8">S8</button>
+            <button class="navigation-container__button" data-section="9">S9</button>
+            <button class="navigation-container__button active" data-section="10">S10</button>
+            <button class="navigation-container__button" data-section="11">S11</button>
+            <button class="navigation-container__button" data-section="12">S12</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="lecture-episode">
+            <div class="card-episode">
+                <img src="episode-1-big.webp" alt="image"/>
+                <p class="titre-episode">1. Probabilités matrimoniales</p>
+                <p class="sous-titre-episode">Tout le monde se prépare à participer à la seconde cérémonie de mariage de
+                    Penny et de Leonard, en présence de leur famille respective au grand complet</p>
+                <p class="sous-titre-episode">( 20 minutes )</p>
+            </div>
+            <div class="card-episode">
+                <img src="episode-2-big.webp" alt="image"/>
+                <p class="titre-episode">2. La miniaturisation militaire</p>
+                <p class="sous-titre-episode">Howard et Léonard demandent à Sheldon de ne pas parler lors de leur
+                    rendez-vous avec le colonel Williams : celui-ci veut leur proposer un contrat mais Léonard et Howard
+                    sont réticents à l’idée de travailler pour l’armée, contrairement à Sheldon.</p>
+                <p class="sous-titre-episode">( 17 minutes )</p>
+            </div>
+            <div class="card-episode">
+                <img src="episode-3-big.webp" alt="image"/>
+                <p class="titre-episode">3. Une dépendance irrépressible</p>
+                <p class="sous-titre-episode">Sheldon, Leonard et Howard enchaînent les nuits blanches en travaillant
+                    sur
+                    leur projet pour l’armée de l’air. Mais c’est un rythme que Sheldon n’arrive pas à tenir.</p>
+                <p class="sous-titre-episode">( 19 minutes )</p>
+            </div>
+            <div class="card-episode">
+                <img src="episode-4-big.webp" alt="image"/>
+                <p class="titre-episode">4. Première cohabitation</p>
+                <p class="sous-titre-episode">Un dégât des eaux force Amy à quitter son appartement. Penny et Leonard
+                    proposent alors à Sheldon et Amy de s’installer dans l’appartement de Penny pendant qu’eux se
+                    retrouveront seuls en amoureux.</p>
+                <p class="sous-titre-episode">( 19 minutes )</p>
+            </div>
+            <div class="card-episode">
+                <img src="episode-5-big.webp" alt="image"/>
+                <p class="titre-episode">5. Jacuzzi a dit</p>
+                <p class="sous-titre-episode">Amy est dépitée car Sheldon lui impose des règles strictes à la maison.
+                    Elle
+                    tombe des nues lorsque Sheldon lui propose de fréquenter d’autres personnes.</p>
+                <p class="sous-titre-episode">( 18 minutes )</p>
+            </div>
+
+            <div class="card-episode">
+                <img src="episode-6-big.webp" alt="image"/>
+                <p class="titre-episode">6. Coup de pied fœtal et fièvre acheteuse</p>
+                <p class="sous-titre-episode">En attendant la fin des travaux dans l’appartement d’Amy, le nouveau
+                    couple
+                    Sheldon-Amy décide de recevoir pour la première fois des invités dans l’appartement de Penny qu’il
+                    partage. </p>
+                <p class="sous-titre-episode">( 17 minutes )</p>
+            </div>
+            <div class="card-episode">
+                <img src="episode-7-big.webp" alt="image"/>
+                <p class="titre-episode">7. Une vérité approximative</p>
+                <p class="sous-titre-episode">Les petits secrets entre amis commencent à s’éventer. Amy ment à Sheldon
+                    en
+                    lui faisant croire que les travaux de son appartement ne sont pas terminés pour continuer à vivre
+                    avec
+                    lui.</p>
+                <p class="sous-titre-episode">( 19 minutes )</p>
+            </div>
+            <div class="card-episode">
+                <img src="episode-8-big.webp" alt="image"/>
+                <p class="titre-episode">8. Super cerveau dans un incubateur</p>
+                <p class="sous-titre-episode">Amy se livre à une expérience en combinant ses cellules cutanées avec
+                    celles
+                    de Sheldon pour les transformer en un réseau neuronal. Le résultat est spectaculaire ce qui pousse
+                    Sheldon à passer à la vitesse supérieure.</p>
+                <p class="sous-titre-episode">( 17 minutes )</p>
+            </div>
+            <div class="card-episode">
+                <img src="episode-9-big.webp" alt="image"/>
+                <p class="titre-episode">9. Le jouet téléguidé</p>
+                <p class="sous-titre-episode">La jalousie de Sheldon envers son collègue géologue Bert, qui a reçu un
+                    prix
+                    prestigieux et une bourse, le pousse à se blesser.</p>
+                <p class="sous-titre-episode">( 18 minutes )</p>
+            </div>
+            <div class="card-episode">
+                <img src="episode-10-big.webp" alt="image"/>
+                <p class="titre-episode">10. Un nouveau colocataire</p>
+                <p class="sous-titre-episode">Maintenant que Sheldon et Amy cohabitent, ils veulent redécorer
+                    l’appartement.
+                    Sheldon commence à se réapproprier tous les objets qui étaient dans son ancien logement au détriment
+                    de
+                    Leonard.</p>
+                <p class="sous-titre-episode">( 18 minutes )</p>
+            </div>
+
+            <div class="card-episode">
+                <img src="episode-11-big.webp" alt="image"/>
+                <p class="titre-episode">11. Halley et venues</p>
+                <p class="sous-titre-episode">La naissance du bébé de Bernadette et d’Howard est imminente et tout le
+                    petit
+                    groupe se précipite à l’hôpital pour soutenir la future mère. </p>
+                <p class="sous-titre-episode">( 19 minutes )</p>
+            </div>
+            <div class="card-episode">
+                <img src="episode-12-big.webp" alt="image"/>
+                <p class="titre-episode">12. Flashbacks</p>
+                <p class="sous-titre-episode">Sheldon et Amy rendent visite à la mère de Sheldon au Texas afin de lui
+                    annoncer qu’ils vivent ensemble. Mais Sheldon se sent trahi car Amy avait déjà prévenu sa mère avant
+                    leur arrivée.</p>
+                <p class="sous-titre-episode">( 20 minutes )</p>
+            </div>
+            <div class="card-episode">
+                <img src="episode-13-big.webp" alt="image"/>
+                <p class="titre-episode">13. Réajustements amoureux</p>
+                <p class="sous-titre-episode">Penny reproche à Leonard de ne plus faire d’efforts dans leur relation.
+                    Sheldon tente de remonter le moral de Leonard et propose son aide au couple.</p>
+                <p class="sous-titre-episode">( 17 minutes )</p>
+            </div>
+            <div class="card-episode">
+                <img src="episode-14-big.webp" alt="image"/>
+                <p class="titre-episode">14. Le décodeur d’émotions !</p>
+                <p class="sous-titre-episode">Sheldon accepte de tester une machine qui décode les émotions de ses
+                    semblables à sa place, ce qui l’enchante dans un premier temps, mais lui attire les foudres de
+                    Leonard.</p>
+                <p class="sous-titre-episode">( 18 minutes )</p>
+            </div>
+            <div class="card-episode">
+                <img src="episode-15-big.webp" alt="image"/>
+                <p class="titre-episode">15. La réverbération de la locomotive</p>
+                <p class="sous-titre-episode">Bender se tourneSheldon pense pouvoir trouver le moyen de faire un système
+                    de
+                    guidage plus petit pour l’armée mais les garçons utilisent leur botte secrète pour se débarrasser de
+                    lui
+                    : un séjour au Nébraska, où il pourra conduire une locomotive.</p>
+                <p class="sous-titre-episode">( 19 minutes )</p>
+            </div>
+
+            <div class="card-episode">
+                <img src="episode-16-big.webp" alt="image"/>
+                <p class="titre-episode">16. Les zones d’intimité</p>
+                <p class="sous-titre-episode">Scandalisée, Amy réalise que Sheldon partage des détails intimes de leur
+                    relation avec plusieurs personnes.
+                <p class="sous-titre-episode">( 16 minutes )</p>
+            </div>
+            <div class="card-episode">
+                <img src="episode-17-big.webp" alt="image"/>
+                <p class="titre-episode">17. Le Comic-Con de situation</p>
+                <p class="sous-titre-episode">Les billets d'entrée pour le prochain Comic-Con vont être mis en vente
+                    mais
+                    les priorités de chacun ont changé.</p>
+                <p class="sous-titre-episode">( 18 minutes )</p>
+            </div>
+            <div class="card-episode">
+                <img src="episode-18-big.webp" alt="image"/>
+                <p class="titre-episode">18. Un toit pour Rajesh</p>
+                <p class="sous-titre-episode">Rajesh déménage chez Leonard et Howard, Sheldon est jaloux et demande
+                    conseil
+                    à la mère de Léonard.</p>
+                <p class="sous-titre-episode">( 18 minutes )</p>
+            </div>
+            <div class="card-episode">
+                <img src="episode-19-big.webp" alt="image"/>
+                <p class="titre-episode">19. Une collaboration houleuse</p>
+                <p class="sous-titre-episode">Sheldon et Amy décident de collaborer professionnellement, et établissent
+                    des
+                    règles de base pour que cela se passe au mieux. Mais ils ne semblent faire de progrès qu’en se
+                    disputant.</p>
+                <p class="sous-titre-episode">( 17 minutes )</p>
+            </div>
+            <div class="card-episode">
+                <img src="episode-120big.webp" alt="image"/>
+                <p class="titre-episode">20. Souviens-toi de la journée dernière</p>
+                <p class="sous-titre-episode">Sheldon décide de travailler avec Amy sur leur projet commun et de
+                    continuer
+                    ses recherches sur le projet du gyroscope avec Leonard et Howard, dans la même journée. Il partage
+                    donc
+                    son temps entre les 2 laboratoires et court d’une pièce à l’autre.</p>
+                <p class="sous-titre-episode">( 18 minutes )</p>
+            </div>
+
+            <div class="card-episode">
+                <img src="episode-21-big.webp" alt="image"/>
+                <p class="titre-episode">21. Une séparation difficile</p>
+                <p class="sous-titre-episode">Amy et Sheldon présentent une rétrospective de leur émission « s’amuser
+                    avec
+                    des drapeaux ». Bert est très fier de présenter à ses amis Rebecca, sa petite amie. </p>
+                <p class="sous-titre-episode">( 18 minutes )</p>
+            </div>
+            <div class="card-episode">
+                <img src="episode-22-big.webp" alt="image"/>
+                <p class="titre-episode">22. Gymnastique cérébrale</p>
+                <p class="sous-titre-episode">Dans un bar, Penny recroise Zack, son ex-petit ami. Il lui propose un
+                    travail
+                    dans son entreprise, ce qui rend Leonard mal à l’aise. Sheldon a peur que son cerveau soit moins
+                    sollicité qu’avant.</p>
+                <p class="sous-titre-episode">( 19 minutes )</p>
+            </div>
+            <div class="card-episode">
+                <img src="episode-23-big.webp" alt="image"/>
+                <p class="titre-episode">23. Instabilité gyroscopique</p>
+                <p class="sous-titre-episode">Le projet de gyroscope du trio Leonard, Sheldon et Howard est à peine
+                    achevé
+                    que l’Armée récupère toutes les données et leur faire comprendre poliment qu’elle prend le relais
+                    pour
+                    l’exploiter.</p>
+                <p class="sous-titre-episode">( 18 minutes )</p>
+            </div>
+            <div class="card-episode">
+                <img src="episode-24-big.webp" alt="image"/>
+                <p class="titre-episode">24. La discorde de la longue distance</p>
+                <p class="sous-titre-episode">Amy a chargé ses amies de surveiller Sheldon en son absence mais celui-ci
+                    flirte sans s’en rendre compte avec une ancienne stagiaire.</p>
+                <p class="sous-titre-episode">( 18 minutes )</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-container">
+        <p>© 2025 Un site web de qualité. Profitez.</p>
+        <div class="footer-links">
+            <a href="#">Mentions légales</a>
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

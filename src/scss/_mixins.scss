@@ -39,3 +39,9 @@
 		grid-template-columns: repeat($large, 1fr);
 	}
 }
+
+@media (max-width: 768px) {
+	.infos {
+		flex-direction: column;
+	}
+}
