@@ -57,6 +57,17 @@
   }
 
   @media (max-width: $mobile) {
+    .movie-card movie-card--large {
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+      h3 {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
     .movie-card__overlay {
       transform: translateY(0);
       background: $overlay-bg;
@@ -65,19 +76,9 @@
     img {
       filter: brightness(0.7);
     }
-    .movie-card__overlay {
-      transform: translateY(0);
-    }
-
-    img {
-      transform: scale(1.1);
-    }
-
-    &:hover {
-      border: 2px solid #fff;
     }
   }
-}
+
 
 .movie-card--large {
   display: flex;

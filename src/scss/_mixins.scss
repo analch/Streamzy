@@ -26,19 +26,19 @@
   display: grid;
   gap: $gap-medium;
 
-	grid-template-columns: repeat($mobile, 1fr);
+  grid-template-columns: 1fr;
 
-	@media (min-width: $tablet) {
-		grid-template-columns: repeat($tablet, 1fr);
-	}
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-	@media (min-width: $desktop) {
-		grid-template-columns: repeat($desktop, 1fr);
-	}
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-	@media (min-width: $large) {
-		grid-template-columns: repeat($large, 1fr);
-	}
+  @media (min-width: $large) {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 

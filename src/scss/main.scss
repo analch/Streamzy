@@ -1,5 +1,5 @@
 @use 'variables' as *;
-@use 'mixins';
+@use 'mixins' as *;
 @use 'components/components';
 
 * {
@@ -15,10 +15,19 @@ body {
   padding: 0;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .container {
   padding: 0 2rem;
 }
 
+.space-y {
+  margin: 2rem 0;
+}
 
 .logo {
   width: 100px;
